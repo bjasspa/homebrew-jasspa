@@ -10,15 +10,16 @@ class MicroemacsMacros < Formula
   def install
     require 'fileutils'
     FileUtils.mkdir_p("#{share}/jasspa/macros") unless Dir.exist?("#{share}/jasspa/macros")
-    FileUtils.mkdir_p("#{SHRPTH}/jasspa") unless Dir.exist?("#{SHRPTH}/jasspa")
     FileUtils.mkdir_p("#{SHRPTH}/jasspa/macros") unless Dir.exist?("#{SHRPTH}/jasspa/macros")
-    Dir.glob("#{buildpath}/macros/*").each do |file|
-      fnm = File.basename(file)
-      sfn = "#{share}/jasspa/macros/#{fnm}"
-      puts "Found file: macros/#{fnm}"
-      cp "#{file}","#{share}/jasspa/macros"
-      ln_sf sfn, "#{SHRPTH}/jasspa/macros/#{fnm}"
-    end  
+    Dir.entries("#{buildpath}/macros").each do |file|
+      if File.file?(file)
+        fnm = File.basename(file)
+        sfn = "#{share}/jasspa/macros/#{fnm}"
+        puts "Found file: macros/#{fnm}"
+        cp "#{file}","#{share}/jasspa/macros"
+        ln_sf sfn,"#{SHRPTH}/jasspa/macros/#{fnm}"
+      end
+    end
   end
 
 end

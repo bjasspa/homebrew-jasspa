@@ -3,8 +3,8 @@ class MicroemacsBinaries < Formula
   desc "Jasspa MicroEmacs Text Editor - Terminal & GUI Binaries"
   homepage "https://github.com/bjasspa/jasspa"
   version "20240903"
-  URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_#{version}/Jasspa_MicroEmacs_#{version}_bin_"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
+  URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_#{version}/Jasspa_MicroEmacs_#{version}_bin_"
   if OS.mac?
     if Hardware::CPU.arm?
       # Code for Apple Silicon (M1, M2, etc.)
@@ -28,26 +28,21 @@ class MicroemacsBinaries < Formula
 
   def install
     require 'fileutils'
-    puts "Got BUILD: #{buildpath}/"
-    puts "Got LIBEXEC: #{libexec}/"
-    puts "Got SHARE: #{share}/"
-    puts "Got SHRPTH: #{SHRPTH}/"
-    FileUtils.mkdir_p("#{SHRPTH}/jasspa") unless Dir.exist?("#{SHRPTH}/jasspa")
     FileUtils.mkdir_p("#{SHRPTH}/jasspa/macros") unless Dir.exist?("#{SHRPTH}/jasspa/macros")
     FileUtils.mkdir_p("#{SHRPTH}/jasspa/spelling") unless Dir.exist?("#{SHRPTH}/jasspa/spelling")
     libexec.install Dir["*"]
     (bin/"mew").write_env_script "#{libexec}/#{ZIPPFX}/mew", :MEINSTALLPATH => "#{SHRPTH}/jasspa/"
     (bin/"mec").write_env_script "#{libexec}/#{ZIPPFX}/mec", :MEINSTALLPATH => "#{SHRPTH}/jasspa/"
     bin.install_symlink "#{libexec}/#{ZIPPFX}/tfs"
-    puts "start Microemacs with: MEPATH=~/.config/jasspa:macros:/home/linuxbrew/.linuxbrew/share/jasspa/spelling mew"
-    puts "on MacOS replace /home/linuxbrew/.linuxbrew with /opt/homebrew for M1 Macs or /usr/local for Intel Macs"
   end
   
   def caveats 
-      <<~EOS
-        This application is better working if you install tools like
+    <<~EOS
+      The GUI application requires an X server, install XQuartz on macOS.
+    
+      The GUI application is better working if you install tools like
         xfontscale to select X11 TrueType fonts
-      EOS
+    EOS
   end
   
   test do
