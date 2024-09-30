@@ -1,5 +1,5 @@
 
-class MicroemacsMew < Formula
+class MicroemacsBinaries < Formula
   desc "MicroEmacs 24 Text Editor GUI Version"
   homepage "https://github.com/bjasspa/jasspa"
   version "20240903"
