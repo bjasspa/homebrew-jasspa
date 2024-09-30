@@ -19,22 +19,14 @@ class MicroemacsBinaries < Formula
       ZIPPFX="bin/linux5-intel64/"
       url "#{URLPFX}linux_binaries.zip"
       sha256 "22F436BE7E400BF56AAE3DC714494ED98413F243E02AED59DDB227F6BA424196"
-  elsif OS.windows?
-      ZIPPFX="bin/windows100-intel32/"
-      url "#{URLPFX}windows_binaries.zip"
-      sha256 "486C9CB70A79D4B82501482A389D0B68BBB9765767C0D91DD54B6B8E4998371D"
+  else
+    odie "Unexpected OS, not linux or macos!"
   end
 
   def install
-      if OS.windows?
-          bin.install "#{ZIPPFX}mew.exe"
-          bin.install "#{ZIPPFX}mec.exe"
-          bin.install "#{ZIPPFX}tfs.exe"
-      else
-          bin.install "#{ZIPPFX}mew"
-          bin.install "#{ZIPPFX}mec"
-          bin.install "#{ZIPPFX}tfs"
-      end
+      bin.install "#{ZIPPFX}mew"
+      bin.install "#{ZIPPFX}mec"
+      bin.install "#{ZIPPFX}tfs"
       puts "start Microemacs with: MEPATH=~/.config/jasspa:/home/linuxbrew/.linuxbrew/share/jasspa/macros:/home/linuxbrew/.linuxbrew/share/jasspa/spelling mew"
       puts "on MacOS replace /home/linuxbrew/.linuxbrew with /opt/homebrew for M1 Macs or /usr/local for Intel Macs"
   end
