@@ -11,12 +11,12 @@ class MicroemacsSpellingEngb < Formula
     require 'fileutils'
     FileUtils.mkdir_p("#{share}/jasspa/spelling") unless Dir.exist?("#{share}/jasspa/spelling")
     FileUtils.mkdir_p("#{SHRPTH}/jasspa/spelling") unless Dir.exist?("#{SHRPTH}/jasspa/spelling")
-    Dir.entries("#{buildpath}/spelling").each do |file|
-      if File.file?(file)
-        fnm = File.basename(file)
+    Dir.glob("#{buildpath}/spelling/*").each do |bfn|
+      if File.file?(bfn)
+        fnm = File.basename(bfn)
         sfn = "#{share}/jasspa/spelling/#{fnm}"
         puts "Found file: spelling/#{fnm}"
-        cp "#{file}","#{share}/jasspa/spelling"
+        cp "#{bfn}","#{share}/jasspa/spelling"
         ln_sf sfn,"#{SHRPTH}/jasspa/spelling/#{fnm}"
       end
     end

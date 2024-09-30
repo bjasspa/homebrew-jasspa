@@ -16,12 +16,12 @@ class Microemacs < Formula
     require 'fileutils'
     FileUtils.mkdir_p("#{share}/jasspa") unless Dir.exist?("#{share}/jasspa")
     FileUtils.mkdir_p("#{SHRPTH}/jasspa") unless Dir.exist?("#{SHRPTH}/jasspa")
-    Dir.entries("#{buildpath}").each do |file|
-      if File.file?(file)
-        fnm = File.basename(file)
+    Dir.glob("#{buildpath}/*").each do |bfn|
+      if File.file?(bfn)
+        fnm = File.basename(bfn)
         sfn = "#{share}/jasspa/#{fnm}"
         puts "Found file: #{fnm}"
-        cp "#{file}","#{share}/jasspa"
+        cp "#{bfn}","#{share}/jasspa"
         ln_sf sfn,"#{SHRPTH}/jasspa/#{fnm}"
       end
     end

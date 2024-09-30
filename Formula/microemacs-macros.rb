@@ -11,12 +11,12 @@ class MicroemacsMacros < Formula
     require 'fileutils'
     FileUtils.mkdir_p("#{share}/jasspa/macros") unless Dir.exist?("#{share}/jasspa/macros")
     FileUtils.mkdir_p("#{SHRPTH}/jasspa/macros") unless Dir.exist?("#{SHRPTH}/jasspa/macros")
-    Dir.entries("#{buildpath}/macros").each do |file|
-      if File.file?(file)
-        fnm = File.basename(file)
+    Dir.glob("#{buildpath}/macros/*").each do |bfn|
+      if File.file?(bfn)
+        fnm = File.basename(bfn)
         sfn = "#{share}/jasspa/macros/#{fnm}"
         puts "Found file: macros/#{fnm}"
-        cp "#{file}","#{share}/jasspa/macros"
+        cp "#{bfn}","#{share}/jasspa/macros"
         ln_sf sfn,"#{SHRPTH}/jasspa/macros/#{fnm}"
       end
     end
