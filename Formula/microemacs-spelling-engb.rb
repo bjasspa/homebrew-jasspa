@@ -11,7 +11,7 @@ class MicroemacsSpellingEngb < Formula
     require 'fileutils'
     FileUtils.mkdir_p("#{share}/jasspa/spelling") unless Dir.exist?("#{share}/jasspa/spelling")
     FileUtils.mkdir_p("#{SHRPTH}/jasspa/spelling") unless Dir.exist?("#{SHRPTH}/jasspa/spelling")
-    Dir.glob("#{buildpath}/spelling/*").each do |bfn|
+    Dir.glob("#{buildpath}/*").each do |bfn|
       if File.file?(bfn)
         fnm = File.basename(bfn)
         sfn = "#{share}/jasspa/spelling/#{fnm}"
