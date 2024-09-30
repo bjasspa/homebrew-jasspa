@@ -1,6 +1,6 @@
 
 class MicroemacsBinaries < Formula
-  desc "MicroEmacs 24 Text Editor - Terminal & GUI Binaries"
+  desc "Jasspa MicroEmacs Text Editor - Terminal & GUI Binaries"
   homepage "https://github.com/bjasspa/jasspa"
   version "20240903"
   URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_#{version}/Jasspa_MicroEmacs_#{version}_bin_"
