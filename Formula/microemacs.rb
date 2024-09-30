@@ -5,7 +5,7 @@ class Microemacs < Formula
   version "20240903"
   # get the readme and COPYING files from the macros dependency which should be in the cache
   url "https://github.com/bjasspa/jasspa/releases/download/me_#{version}/Jasspa_MicroEmacs_#{version}_macros.zip"
-  sha256 "38f30e3005aa9bf7bd3c606d7f01fdb79467890219c138d09e2123d12eda75c0"
+  sha256 "F92036BF751C4C9A02C7763985DA36E0CF94A034F03A6702826E33ABCB767277"
   # Add more dependencies as needed
   depends_on "microemacs-binaries"
   depends_on "microemacs-macros"  
