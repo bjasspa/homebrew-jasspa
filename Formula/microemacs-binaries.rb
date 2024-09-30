@@ -24,11 +24,10 @@ class MicroemacsBinaries < Formula
   end
 
   def install
-      bin.install "#{ZIPPFX}mew"
-      bin.install "#{ZIPPFX}mec"
-      bin.install "#{ZIPPFX}tfs"
-      puts "start Microemacs with: MEPATH=~/.config/jasspa:/home/linuxbrew/.linuxbrew/share/jasspa/macros:/home/linuxbrew/.linuxbrew/share/jasspa/spelling mew"
-      puts "on MacOS replace /home/linuxbrew/.linuxbrew with /opt/homebrew for M1 Macs or /usr/local for Intel Macs"
+    libexec.install Dir["*"]
+    (bin/"mew").write_env_script "#{libexec}/#{ZIPPFX}mew", :MEINSTALLPATH => "/home/linuxbrew/.linuxbrew/share/jasspa/"
+    puts "start Microemacs with: MEPATH=~/.config/jasspa:macros:/home/linuxbrew/.linuxbrew/share/jasspa/spelling mew"
+    puts "on MacOS replace /home/linuxbrew/.linuxbrew with /opt/homebrew for M1 Macs or /usr/local for Intel Macs"
   end
   
   def caveats 
