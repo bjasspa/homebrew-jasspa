@@ -1,5 +1,5 @@
 # -!- ruby -!-
-class MicroemacsMew < Formula
+class MicroemacsBinaries < Formula
   desc "Jasspa MicroEmacs Text Editor - Terminal & GUI Binaries"
   homepage "https://github.com/bjasspa/jasspa"
   version "20240903"
