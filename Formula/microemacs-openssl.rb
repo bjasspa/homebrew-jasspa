@@ -8,7 +8,7 @@ class MicroemacsOpenssl < Formula
   depends_on "microemacs-binaries"
   if OS.linux?
     url "#{URLPFX}/Jasspa_MicroEmacs_20240903_bin_linux_openssl.zip"
-    sha256 "__sha_linux__"
+    sha256 "C0167D5D6C1F8C7079A1600904B02DB1372514A56FD33F75380C1ACFF8B135D4"
   elsif OS.mac?
     if Hardware::CPU.arm?
       # Code for Apple Silicon (M1, M2, etc.)
