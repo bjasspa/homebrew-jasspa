@@ -1,10 +1,10 @@
-
+# -!- ruby -!-
 class MicroemacsMacros < Formula
   desc "Jasspa MicroEmacs Text Editor - Macro files"
   homepage "https://github.com/bjasspa/jasspa"
   version "20240903"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_#{version}/Jasspa_MicroEmacs_#{version}_macros.zip"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20240903/Jasspa_MicroEmacs_20240903_macros.zip"
   sha256 "F92036BF751C4C9A02C7763985DA36E0CF94A034F03A6702826E33ABCB767277"
 
   def install

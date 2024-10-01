@@ -1,11 +1,11 @@
 # -!- ruby -!-
-class MicroemacsSpellingEngb < Formula
-  desc "Jasspa MicroEmacs Text Editor - Spelling Rules for British (engb)"
+class MicroemacsSpellingEses < Formula
+  desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Espanol (eses)"
   homepage "https://github.com/bjasspa/jasspa"
   version "20240903"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20240903/Jasspa_MicroEmacs_20240903_spelling_engb.zip"
-  sha256 "35AF8D378BD0E895858233F8D651022C5BDA0BC1482018FAED305F742EBC4C8C"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20240903/Jasspa_MicroEmacs_20240903_spelling_eses.zip"
+  sha256 "0FD68355D0B3A34893DA315DA3D4088CDD4E16AA27D183A07BECF958E8319A2B"
 
   def install
     require 'fileutils'
