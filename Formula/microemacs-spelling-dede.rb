@@ -2,10 +2,10 @@
 class MicroemacsSpellingDede < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Deutsch (dede)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20240903"
+  version "20241001"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20240903/Jasspa_MicroEmacs_20240903_spelling_dede.zip"
-  sha256 "B2AD90995B39D8563DE72C01C3C4B78270BB8A6B813FEDC8A38A18FFBBBB6BDF"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20241001/Jasspa_MicroEmacs_20241001_spelling_dede.zip"
+  sha256 "81B285F8721DD87056DE700FC87CCA0910291ED1DF0A342B72DFFE55ADE0D3B1"
 
   def install
     require 'fileutils'

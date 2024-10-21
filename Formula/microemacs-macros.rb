@@ -2,10 +2,10 @@
 class MicroemacsMacros < Formula
   desc "Jasspa MicroEmacs Text Editor - Macro files"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20240903"
+  version "20241001"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20240903/Jasspa_MicroEmacs_20240903_macros.zip"
-  sha256 "F92036BF751C4C9A02C7763985DA36E0CF94A034F03A6702826E33ABCB767277"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20241001/Jasspa_MicroEmacs_20241001_macros.zip"
+  sha256 "AF82564419913D458D110F5D818ADF7930C832A8D321445DF6AF1F4ECB7EBF30"
 
   def install
     require 'fileutils'

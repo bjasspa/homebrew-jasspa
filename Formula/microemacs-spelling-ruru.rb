@@ -2,10 +2,10 @@
 class MicroemacsSpellingRuru < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Russian (ruru)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20240903"
+  version "20241001"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20240903/Jasspa_MicroEmacs_20240903_spelling_ruru.zip"
-  sha256 "26734551AFCDA268FEA5E7629352A8C9A4A0BA41428EC7ADAA1FE3AEA593CA0C"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20241001/Jasspa_MicroEmacs_20241001_spelling_ruru.zip"
+  sha256 "C5414A1A088296A7F81280353002DA560B6095D438BA9812202218B3341E2B63"
 
   def install
     require 'fileutils'
