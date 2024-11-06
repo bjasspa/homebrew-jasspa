@@ -2,10 +2,10 @@
 class MicroemacsSpellingEnus < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for American (enus)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20241001"
+  version "20241101"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20241001/Jasspa_MicroEmacs_20241001_spelling_enus.zip"
-  sha256 "7EF9F1D8ADB53BED014AA85F7CB851E5AC75DD1EF92624267AF123DE32773FB9"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20241101/Jasspa_MicroEmacs_20241101_spelling_enus.zip"
+  sha256 "09B9BC2E9B1AC6CEA47C7D2FAF010236627DB5D522AFD99888CA36E5A6F18B80"
 
   def install
     require 'fileutils'
