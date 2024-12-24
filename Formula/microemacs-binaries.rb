@@ -2,23 +2,23 @@
 class MicroemacsBinaries < Formula
   desc "Jasspa MicroEmacs Text Editor - Terminal & GUI Binaries"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20241101"
+  version "20241201"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_20241101"
+  URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_20241201"
   if OS.linux?
     ZIPPFX="bin/linux5-intel64"
-    url "#{URLPFX}/Jasspa_MicroEmacs_20241101_bin_linux_binaries.zip"
-    sha256 "DAA6BD3E395EA5D0FA0594981B8680FD264186DF0D7F834655EFD81BE936AAEA"
+    url "#{URLPFX}/Jasspa_MicroEmacs_20241201_bin_linux_binaries.zip"
+    sha256 "1895B9787A2A987CCB712D83F59389EA9B925281DD5E837E18253D5CA8FDE2B7"
   elsif OS.mac?
     if Hardware::CPU.arm?
       # Code for Apple Silicon (M1, M2, etc.)
       ZIPPFX="bin/macos14-apple64"
-      url "#{URLPFX}/Jasspa_MicroEmacs_20241101_bin_macos_apple_binaries.zip"
-      sha256 "AB162E781B1C4EA137DCC2241EBBE3CD3B5E16E367FB92972B35FBB313B37EF0"
+      url "#{URLPFX}/Jasspa_MicroEmacs_20241201_bin_macos_apple_binaries.zip"
+      sha256 "E7DFA9D4A7293F87375C35AD2F3BF47810F1D964086CAA6869704AD8FA24516B"
     elsif Hardware::CPU.intel?
       ZIPPFX="bin/macos13-intel64"
-      url "#{URLPFX}/Jasspa_MicroEmacs_20241101_bin_macos_intel_binaries.zip"
-      sha256 "A93B0F149E354A3A0F2F2212F4D87E5A26618D8C32A519895A55F6A2583BFB36"
+      url "#{URLPFX}/Jasspa_MicroEmacs_20241201_bin_macos_intel_binaries.zip"
+      sha256 "F5E651E6E1A63428B3F0130ADDA57F0F65926A5194667D51654B18CD54C16EDD"
     else
       odie "Unexpected macOS Hardware, not arm or intel!"
     end

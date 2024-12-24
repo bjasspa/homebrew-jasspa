@@ -2,10 +2,10 @@
 class MicroemacsSpellingPtpt < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Portugues (ptpt)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20241101"
+  version "20241201"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20241101/Jasspa_MicroEmacs_20241101_spelling_ptpt.zip"
-  sha256 "F670B4FC65F9D505DC9D0C188EA5257FDCF852080E59A32A1DCFF73FE7691360"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20241201/Jasspa_MicroEmacs_20241201_spelling_ptpt.zip"
+  sha256 "817C2E14377D89698799A7C951472172726D63CFC4397147CBD2C8B175F481D5"
 
   def install
     require 'fileutils'
