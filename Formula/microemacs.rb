@@ -2,11 +2,11 @@
 class Microemacs < Formula
   desc "Jasspa MicroEmacs Text Editor - Meta Package Terminal and GUI Version"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20241201"
+  version "20250101"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
   # get the readme and COPYING files from the macros dependency which should be in the cache
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20241201/Jasspa_MicroEmacs_20241201_macros.zip"
-  sha256 "BBAC6E62B59F68C7DE4EA79FE5AF944C5EC8AF6D9B41A53554C769C7457A1375"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20250101/Jasspa_MicroEmacs_20250101_macros.zip"
+  sha256 "5991A7B0047CE2EF9DAE77101D29058FD1B44EECB39F59CDF5769E81ACDE93F4"
   # Add more dependencies as needed
   depends_on "microemacs-binaries"
   depends_on "microemacs-macros"  

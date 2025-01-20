@@ -2,10 +2,10 @@
 class MicroemacsSpellingElgr < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Greek (elgr)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20241201"
+  version "20250101"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20241201/Jasspa_MicroEmacs_20241201_spelling_elgr.zip"
-  sha256 "10D6C44D703A963DADE42CF97EF624FE094B9254CE33400A71A66307DAD22861"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20250101/Jasspa_MicroEmacs_20250101_spelling_elgr.zip"
+  sha256 "B93CD90F732EC37551F96263E24A8E87FD2E316C34CED56BE3115EF34F6BE739"
 
   def install
     require 'fileutils'
