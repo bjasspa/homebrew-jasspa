@@ -2,10 +2,10 @@
 class MicroemacsHelp < Formula
   desc "Jasspa MicroEmacs Text Editor - Help file"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20250301"
+  version "20250501"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20250301/Jasspa_MicroEmacs_20250301_help_ehf.zip"
-  sha256 "7F2AC20D1E2CFFC22DB15B720A63793CCF46CE803BF707B94D51E13B3BA2C6FF"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20250501/Jasspa_MicroEmacs_20250501_help_ehf.zip"
+  sha256 "196ECF2C4EA07FA6689CFD22857EC6948516A25AA5FEB185ED448757081CBCA8"
 
   def install
     require 'fileutils'

@@ -2,10 +2,10 @@
 class MicroemacsSpellingFifi < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Finnish (fifi)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20250301"
+  version "20250501"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20250301/Jasspa_MicroEmacs_20250301_spelling_fifi.zip"
-  sha256 "31E3FF7B619BDD09176190F4C7CD2119431005B493BB052F7CAF25BC853A9F37"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20250501/Jasspa_MicroEmacs_20250501_spelling_fifi.zip"
+  sha256 "BDAAD216AC8E7B04D4DE168B5BE9D109F4BE4CB3D0130D025C6C4D274EB2E705"
 
   def install
     require 'fileutils'

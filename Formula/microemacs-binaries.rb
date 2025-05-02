@@ -2,23 +2,31 @@
 class MicroemacsBinaries < Formula
   desc "Jasspa MicroEmacs Text Editor - Terminal & GUI Binaries"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20250301"
+  version "20250501"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_20250301"
+  URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_20250501"
   if OS.linux?
-    ZIPPFX="bin/linux5-intel64"
-    url "#{URLPFX}/Jasspa_MicroEmacs_20250301_bin_linux_binaries.zip"
-    sha256 "9A5B1B4053F4B032EE2F56C28DD837D1C557D2BCCA9275D2E368B3FFB270E54A"
+    if Hardware::CPU.arm?
+        ZIPPFX="bin/linux6-aarch64"
+        url "#{URLPFX}/Jasspa_MicroEmacs_20250501_bin_linux_aarch_binaries.zip"
+        sha256 "ACF37B1977DCA2234EC997EC16F39335FEFCE1AD329B991F74389B3EA89CD77D"
+    elsif Hardware::CPU.intel?
+        ZIPPFX="bin/linux6-intel64"
+        url "#{URLPFX}/Jasspa_MicroEmacs_20250501_bin_linux_intel_binaries.zip"
+        sha256 "DF104E262C1F5DE40876086B074A0EE86DD6724A029A2A05E9AC5C05EAA22D27"
+    else
+      odie "Unexpected macOS Hardware, not arm or intel!"
+    end
   elsif OS.mac?
     if Hardware::CPU.arm?
       # Code for Apple Silicon (M1, M2, etc.)
       ZIPPFX="bin/macos14-apple64"
-      url "#{URLPFX}/Jasspa_MicroEmacs_20250301_bin_macos_apple_binaries.zip"
-      sha256 "69C93F47E456007FEB4AE8CDDD3EE97529F5D3A937D0140317EEC0CA9DBDADB4"
+      url "#{URLPFX}/Jasspa_MicroEmacs_20250501_bin_macos_apple_binaries.zip"
+      sha256 "E2F746E7FCCB6FFB0FF04AA0CD3D32EE3AD6BD50B93096CEA38776B3DBFB384C"
     elsif Hardware::CPU.intel?
       ZIPPFX="bin/macos13-intel64"
-      url "#{URLPFX}/Jasspa_MicroEmacs_20250301_bin_macos_intel_binaries.zip"
-      sha256 "CF71578C760E378AEE35A6E63C32DCD11EAB57B6F328D117B54B20F4CEC3AB66"
+      url "#{URLPFX}/Jasspa_MicroEmacs_20250501_bin_macos_intel_binaries.zip"
+      sha256 "AE48543A0BF372037DAB8FCD0FBA9A09CC5538E08045538BE7A67E02454550E0"
     else
       odie "Unexpected macOS Hardware, not arm or intel!"
     end
