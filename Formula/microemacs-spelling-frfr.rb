@@ -2,10 +2,10 @@
 class MicroemacsSpellingFrfr < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Francais (frfr)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20250601"
+  version "20250701"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20250601/Jasspa_MicroEmacs_20250601_spelling_frfr.zip"
-  sha256 "6032E96EB350CA00157EBD64964BE3497DB7DBFA36C2019E803E9132757D5AD1"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20250701/Jasspa_MicroEmacs_20250701_spelling_frfr.zip"
+  sha256 "FB1C28E29F1A85A1DD3E79005262ADAFE5A57A8CD75C3ACD10CCE9B2406AC582"
 
   def install
     require 'fileutils'
