@@ -2,10 +2,10 @@
 class MicroemacsSpellingItit < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Italiano (itit)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20250701"
+  version "20250801"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20250701/Jasspa_MicroEmacs_20250701_spelling_itit.zip"
-  sha256 "B2A357992E6F717E96640E680E84F28566BFB26449043CA5EF76E484B59582D4"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20250801/Jasspa_MicroEmacs_20250801_spelling_itit.zip"
+  sha256 "4CF72939F5C9D2785921D2D16432AADA55D6B15ED6799C74F8484115C635D0C9"
 
   def install
     require 'fileutils'

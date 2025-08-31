@@ -2,10 +2,10 @@
 class MicroemacsSpellingPlpl < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Polish (plpl)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20250701"
+  version "20250801"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20250701/Jasspa_MicroEmacs_20250701_spelling_plpl.zip"
-  sha256 "5756AC31695A1E110DAA25FFE17FBDAD25D2F4A7233733835C815BEB4CCB9F2A"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20250801/Jasspa_MicroEmacs_20250801_spelling_plpl.zip"
+  sha256 "655F30B833E24AC78329F16E217C3572699C30A85E3E5A69FC2202F283622F83"
 
   def install
     require 'fileutils'
