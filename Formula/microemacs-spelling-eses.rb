@@ -2,10 +2,10 @@
 class MicroemacsSpellingEses < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for Espanol (eses)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20250901"
+  version "20251001"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20250901/Jasspa_MicroEmacs_20250901_spelling_eses.zip"
-  sha256 "987644E587CC3130C220C2ADDE230A7363FF2B35597D34AFC9C14686F29D444E"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20251001/Jasspa_MicroEmacs_20251001_spelling_eses.zip"
+  sha256 "62D525E7E005CF6FD16EB38F4CAD9F1339DBE2EEB04E7FFA2585E0056C49579A"
 
   def install
     require 'fileutils'
