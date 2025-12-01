@@ -2,10 +2,10 @@
 class MicroemacsSpellingEngb < Formula
   desc "Jasspa MicroEmacs Text Editor - Spelling Rules for British (engb)"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20251101"
+  version "20251201"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  url "https://github.com/bjasspa/jasspa/releases/download/me_20251101/Jasspa_MicroEmacs_20251101_spelling_engb.zip"
-  sha256 "93F2ED520341B6ED2858C02A13CDD20E8F3C831B68922140DBE29C98780CDF07"
+  url "https://github.com/bjasspa/jasspa/releases/download/me_20251201/Jasspa_MicroEmacs_20251201_spelling_engb.zip"
+  sha256 "C6AC5FE669EAFB35A186C4CE3D83AEF8B61017ED484BC83781A7C4932F05D6A0"
 
   def install
     require 'fileutils'
