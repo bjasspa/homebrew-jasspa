@@ -2,18 +2,18 @@
 class MicroemacsBinaries < Formula
   desc "Jasspa MicroEmacs Text Editor - Terminal & GUI Binaries"
   homepage "https://github.com/bjasspa/jasspa"
-  version "20251201"
+  version "20260101"
   SHRPTH="#{HOMEBREW_PREFIX}/share"
-  URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_20251201"
+  URLPFX="https://github.com/bjasspa/jasspa/releases/download/me_20260101"
   if OS.linux?
     if Hardware::CPU.arm?
         ZIPPFX="bin/linux6-aarch64"
-        url "#{URLPFX}/Jasspa_MicroEmacs_20251201_bin_linux_aarch_binaries.zip"
-        sha256 "5B5098F28D1E2B54897F4E259FF6459AED204DEC02D872DB228C152C6031BD77"
+        url "#{URLPFX}/Jasspa_MicroEmacs_20260101_bin_linux_aarch_binaries.zip"
+        sha256 "32FE1F56DC2E05408F333D0F7E30C2BA3F4D815036FC4D5FD9D7FD966D495F2D"
     elsif Hardware::CPU.intel?
         ZIPPFX="bin/linux6-intel64"
-        url "#{URLPFX}/Jasspa_MicroEmacs_20251201_bin_linux_intel_binaries.zip"
-        sha256 "DD83767AFE351B806D877253790C6C8BE8AAF1A591FD48BF10424352EA722806"
+        url "#{URLPFX}/Jasspa_MicroEmacs_20260101_bin_linux_intel_binaries.zip"
+        sha256 "A09A07F12BA79EE12BCE812E1F442FB8EA12861D15402780BB46A98117C83AEB"
     else
       odie "Unexpected macOS Hardware, not arm or intel!"
     end
@@ -21,12 +21,12 @@ class MicroemacsBinaries < Formula
     if Hardware::CPU.arm?
       # Code for Apple Silicon (M1, M2, etc.)
       ZIPPFX="bin/macos14-apple64"
-      url "#{URLPFX}/Jasspa_MicroEmacs_20251201_bin_macos_apple_binaries.zip"
-      sha256 "B38ACE7D8578226262408527CAB9BE1B76929039EE394AFB5E5452C752CD87F6"
+      url "#{URLPFX}/Jasspa_MicroEmacs_20260101_bin_macos_apple_binaries.zip"
+      sha256 "4EBA2760F140B77A0CDE20438A38B0A0D0E2C0AC392F3B1D26735DBD1ED92A34"
     elsif Hardware::CPU.intel?
       ZIPPFX="bin/macos13-intel64"
-      url "#{URLPFX}/Jasspa_MicroEmacs_20251201_bin_macos_intel_binaries.zip"
-      sha256 "111831F9D6834951B918C2D09E7F5F274A1A9A4BFF004B4C31049DE5AA71798F"
+      url "#{URLPFX}/Jasspa_MicroEmacs_20260101_bin_macos_intel_binaries.zip"
+      sha256 "B6CF54B5E3D8AE0DDC248A61011085FEECEB29BD97E419813E2C5C48824790FA"
     else
       odie "Unexpected macOS Hardware, not arm or intel!"
     end
